@@ -1,0 +1,38 @@
+[package]
+authors = ["Phoebe Queen <phoebe.queen@nccgroup.trust>"]
+name = "zipdefrag"
+version = "0.1.0"
+[[bin]]
+name = "zipdefrag-cli"
+path = "src/main.rs"
+
+[dependencies]
+bitflags = "0.9"
+chrono = "*"
+env_logger = "*"
+log = "0.3.8"
+
+[dependencies.clippy]
+optional = true
+version = "*"
+
+[dependencies.cogset]
+git = "https://github.com/queenp/cogset.git"
+
+[dependencies.nom]
+features = ["nightly", "verbose-errors"]
+version = "^3.2"
+
+[features]
+default = []
+
+[lib]
+name = "zipdefrag"
+path = "src/lib.rs"
+
+[profile]
+[profile.release]
+lto = true
+
+[target.x86_64-pc-windows-gnu]
+linker = "x86_64-w64-mingw32-gcc"
