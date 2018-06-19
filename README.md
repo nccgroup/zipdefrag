@@ -6,19 +6,20 @@
 
 Once upon a time, dear reader, on a dark and stormy night, your faithful author
 stumbled upon a perplexing and mysterious situation - a system where the only
-thing preventing chip off memory analysis and reversing was an unknokwn
-proprietary file system breaking existing tools for memory extraction.
+thing preventing chip off memory analysis and reversing was an unknown
+fragmented proprietary file system in conjunction with compression due to the
+use of embedded Java reducing the effectiveness of existing tools for file
+carving.
 
 Some ad hoc solution might have been cobbled together at the time by manually
 concatenating chunks that looked like they fitted together with a bit of
 hideous python console work and ugly ad hoc bash scripting. It was Good Enough,
 but Time Intensive.
 
-This case was particularly puzzling - an embedded Java system was involved, and
-while extracting plain uncompressed data in chip-off analysis is a fairly
+While extracting plain uncompressed data in chip-off analysis is a fairly
 humdrum job in the day of a hardware hacker, compression poses significant problems
 when pieces of it are littered just everywhere in an irrational and displeasing
-manner.
+manner, even when no real other protections are in place against extraction.
 
 ## But surely there must be a better way?
 
@@ -204,7 +205,7 @@ which enables verbose terminal logging demonstrating the analysis so far.
 ### Known Issues
 
 * Performance is currently busted for the rust implementation due to wasteful behaviour around
-searching for corresponding LFH chunks. Will fix
+searching for corresponding LFH chunks. Will fix this and learn my lesson.
 
 ## More to come:
 
