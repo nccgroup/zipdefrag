@@ -112,11 +112,11 @@ Version fields all vary based on the Zip stack used to compress the file.
 Additionally, the headers have timestamps, and it's generally unlikely that all
 of the firmwares were compiled and compressed exactly the same time.
 
-|	As an aside, it is worth noting that Zip files use MS-DOS format timestamps,
-|	which are bit packed shorts representing year-month-day and hour-minute-two-seconds.
-|	If these weren't converted to an absolute scalar value before using this as
-|	classification data, you might well give as much weight to a year's difference
-|	as you do to a second and that's no good at all!
+>	As an aside, it is worth noting that Zip files use MS-DOS format timestamps,
+>	which are bit packed shorts representing year-month-day and hour-minute-two-seconds.
+>	If these weren't converted to an absolute scalar value before using this as
+>	classification data, you might well give as much weight to a year's difference
+>	as you do to a second and that's no good at all!
 
 We convert these into a Euclidean Vector (which is a fancy word for an
 n-dimentional array of values in ℝ, or float coords, but the video linked above
