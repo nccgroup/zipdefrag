@@ -205,8 +205,7 @@ which enables verbose terminal logging demonstrating the analysis so far.
 ## More to come:
 
 * A fast portable native executable (with python hooks) for puzzle-solving
-  zip dumps from unknown file systems (the PoC works better than binwalk on our
-  sample of one firmware dump, however 
+  zip dumps from unknown file systems.
 
 * A demonstration dump
 
