@@ -202,11 +202,6 @@ Currently there's no terminal output by default for the Rust version, if you wan
 to run the cli harness you need to set the environment variable `RUST_LOG=zipdefrag`
 which enables verbose terminal logging demonstrating the analysis so far.
 
-### Known Issues
-
-* Performance is currently busted for the rust implementation due to wasteful behaviour around
-searching for corresponding LFH chunks. Will fix this and learn my lesson.
-
 ## More to come:
 
 * A fast portable native executable (with python hooks) for puzzle-solving
@@ -217,9 +212,12 @@ searching for corresponding LFH chunks. Will fix this and learn my lesson.
 
 ## Known Issues
 
-This technique does not work well when many of the files in the JAR are
-significantly larger than the page size. As it relies on heavy use of the
-structure inherent in zip files, data-heavy files just don't work out so well.
+* Performance is currently busted for the rust implementation due to wasteful behaviour around
+  searching for corresponding LFH chunks. Will fix this and learn my lesson.
+
+* This technique does not work well when many of the files in the JAR are
+  significantly larger than the page size. As it relies on heavy use of the
+  structure inherent in zip files, data-heavy files just don't work out so well.
 
 Conveniently class files tend to be fairly small in general for J2ME midlets,
 but large binaries packaged inside will probably be unrecoverable.
